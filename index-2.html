@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="আতাউর রহমান আল হাবিবী — কম্পিউটার বিশেষজ্ঞ, গ্রাফিক ডিজাইনার, আমিন (জরিপকারী), হাফেজ কোরআন ও দাওরায়ে হাদিস সম্পন্ন আতাউর রহমান আল হাবিবীর অফিসিয়াল ওয়েবসাইট।">
+  <meta property="og:title" content="আতাউর রহমান আল হাবিবী | অফিসিয়াল ওয়েবসাইট">
+  <meta property="og:description" content="শিক্ষা, কুরআন শিক্ষা ও মানবসেবায় শিক্ষা ও কর্মজীবন।">
+  <title>আতাউর রহমান আল হাবিবী | অফিসিয়াল ওয়েবসাইট</title>
+  <style>
+    :root{--blue:#155eef;--blue-dark:#123b78;--ink:#152238;--muted:#5e6b7e;--line:#e5ebf3;--soft:#f5f8ff;--white:#fff;--shadow:0 14px 40px rgba(22,53,99,.08)}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:86px}
+    body{margin:0;background:#fff;color:var(--ink);font-family:system-ui,"Noto Sans Bengali","SolaimanLipi",sans-serif;line-height:1.85}
+    a{color:inherit;text-decoration:none}
+    a:focus-visible,button:focus-visible{outline:3px solid #93b4ff;outline-offset:3px}
+    .container{width:min(1120px,92%);margin-inline:auto}
+    .topbar{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-weight:800;letter-spacing:-.3px;color:var(--blue-dark);font-size:18px;white-space:nowrap}
+    .navlinks{display:flex;align-items:center;gap:20px;font-size:14px;color:#43516a}
+    .navlinks a:hover{color:var(--blue)}
+    .menu-button{display:none;border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 12px;color:var(--ink);font:inherit}
+    .hero{padding:28px 0 38px;background:#fff}
+    .hero-grid{display:flex;flex-direction:column;align-items:center;gap:18px;max-width:760px;text-align:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--blue);background:#edf3ff;border:1px solid #dce7ff;padding:6px 12px;border-radius:999px;font-size:13px;font-weight:700}
+    h1{font-size:clamp(36px,5.4vw,62px);line-height:1.2;letter-spacing:-1.3px;margin:20px 0 12px;color:#102b56}
+    .hero h2{font-size:clamp(18px,2.2vw,23px);font-weight:600;color:#435779;margin:0 0 16px}
+    .hero p{font-size:17px;color:var(--muted);max-width:680px;margin:0 0 26px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .button{display:inline-flex;align-items:center;justify-content:center;padding:11px 18px;border-radius:12px;font-weight:700;font-size:14px;border:1px solid var(--blue);background:var(--blue);color:#fff;transition:transform .2s,box-shadow .2s}
+    .button:hover{transform:translateY(-2px);box-shadow:0 8px 22px #155eef2c}
+    .button.secondary{background:#fff;color:var(--blue);border-color:#d5e1f5}
+    .portrait{order:-1;width:100%;min-height:0;border:0;border-radius:0;background:#fff;display:grid;place-items:center;padding:0;box-shadow:none;text-align:center}
+    .avatar{width:150px;height:150px;border-radius:50%;display:grid;place-items:center;margin:0 auto 18px;background:#fff;border:1px solid #d9e5f8;color:var(--blue-dark);font-size:38px;font-weight:800;box-shadow:0 10px 28px #1c4b9014}
+    .portrait strong{display:block;font-size:19px;color:var(--blue-dark)}
+    .portrait span{font-size:13px;color:var(--muted)}
+    section{padding:76px 0}
+    .section-soft{background:var(--soft)}
+    .section-head{max-width:720px;margin:0 auto 36px;text-align:center}
+    .kicker{font-size:12px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase;color:var(--blue)}
+    .section-head h2{font-size:clamp(27px,3.3vw,38px);line-height:1.3;margin:8px 0 10px;color:#123466}
+    .section-head p{color:var(--muted);margin:0}
+    .about-copy{max-width:850px;margin:auto;font-size:17px;color:#4b586c}
+    .about-copy p{margin:0 0 15px}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 5px 22px rgba(22,53,99,.035)}
+    .card h3{font-size:19px;color:#173d78;margin:0 0 12px;line-height:1.5}
+    .card p{color:var(--muted);margin:0 0 12px;font-size:15px}
+    .card p:last-child{margin-bottom:0}
+    .iconbox{width:42px;height:42px;border-radius:12px;background:#edf3ff;color:var(--blue);display:grid;place-items:center;font-size:21px;margin-bottom:16px}
+    .tag-list{display:flex;flex-wrap:wrap;gap:8px}
+    .tag{padding:6px 10px;border-radius:999px;background:#f0f5ff;color:#254c89;border:1px solid #e1eaff;font-size:12px;font-weight:650}
+    .subheading{font-size:22px;color:#163b74;margin:0 0 18px}
+    .institution-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-bottom:34px}
+    .institution{padding:20px;border:1px solid var(--line);border-radius:15px;background:#fff}
+    .institution h4{margin:0 0 5px;color:#173d78;font-size:17px}
+    .institution p{margin:0;color:var(--muted);font-size:14px}
+    .timeline{max-width:850px;margin:auto;border-left:2px solid #d9e5fb;padding-left:25px}
+    .timeline-item{position:relative;margin:0 0 22px;padding:20px 22px;background:#fff;border:1px solid var(--line);border-radius:15px}
+    .timeline-item:before{content:"";position:absolute;left:-33px;top:26px;width:13px;height:13px;border-radius:50%;background:var(--blue);border:3px solid #e8f0ff}
+    .timeline-item p{margin:0;color:var(--muted)}
+    .video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+    .video-card{overflow:hidden;padding:0}
+    .video{position:relative;aspect-ratio:16/9;background:#eaf0f8}
+    .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+    .video-title{padding:17px 20px;font-weight:750;color:#173d78}
+    .profile-photo{display:block;width:min(590px,100%);height:310px;object-fit:cover;border-radius:8px;margin:0 auto 10px;border:1px solid #d9e5f8}
+    .certificate-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .certificate-image{display:block;width:100%;height:230px;object-fit:contain;background:#f7f9fc;border:1px solid var(--line);border-radius:12px;margin-bottom:14px}
+    @media(max-width:640px){.certificate-grid{grid-template-columns:1fr}}
+    .future{max-width:850px;margin:auto;background:linear-gradient(120deg,#f0f5ff,#fff);border:1px solid #dce7f8;border-radius:22px;padding:32px}
+    .future h3{margin:0 0 10px;color:#173d78;font-size:23px}
+    .future p{margin:0;color:var(--muted)}
+    .contact-panel{max-width:760px;margin:auto;text-align:center;padding:38px 24px;border:1px solid #dce7f8;border-radius:22px;background:linear-gradient(140deg,#f1f6ff,#fff)}
+    .contact-panel h3{font-size:25px;margin:0 0 5px;color:#123466}
+    .contact-panel p{color:var(--muted);margin:0 0 20px}
+    .footer{padding:28px 0;background:#102b56;color:#dbe7fb;text-align:center;font-size:13px}
+    .footer strong{display:block;font-size:16px;margin-bottom:5px;color:#fff}
+    .footer p{margin:0}
+    @media(max-width:850px){.hero-grid{grid-template-columns:1fr;gap:28px}.portrait{min-height:230px}.grid,.institution-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.navlinks{gap:12px}}
+    @media(max-width:640px){.nav{min-height:64px}.brand{font-size:15px}.menu-button{display:inline-flex}.navlinks{display:none;position:absolute;top:63px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);padding:14px 5%;flex-direction:column;align-items:flex-start;gap:12px}.navlinks.open{display:flex}.hero{padding:55px 0}.hero p{font-size:16px}section{padding:58px 0}.grid,.institution-grid,.video-grid{grid-template-columns:1fr}.card{padding:21px}.timeline{padding-left:20px}.timeline-item:before{left:-28px}.future{padding:25px 21px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+
+    /* Refined centered profile layout */
+    .hero{padding:34px 0 46px;background:linear-gradient(180deg,#f7faf8,#fff)}
+    .hero-grid{display:flex;flex-direction:column;gap:20px;max-width:1080px;text-align:center}
+    .hero-grid>div:first-child{order:2;max-width:900px;margin:auto}
+    .hero-grid .portrait{order:1;width:100%;max-width:900px;margin:auto;min-height:0;background:#fff;border:0;box-shadow:none;padding:0}
+    .profile-photo{width:100%;height:clamp(220px,36vw,390px);object-fit:cover;object-position:center 35%;border-radius:12px;margin:0 auto 14px;border:1px solid #e2e9e3}
+    .portrait strong{display:block;font-size:clamp(25px,3vw,36px);color:#123f38;margin:8px 0}
+    .portrait>div>span{line-height:1.8}
+    .hero-grid>div:first-child h1{display:none}
+    .hero-grid>div:first-child h2{font-size:16px;font-weight:600;color:#315e53;margin:4px 0 12px}
+    .hero-grid>div:first-child .eyebrow{display:none}
+    .credential-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin:18px auto 0;max-width:1080px;background:#f7f8f1;border:1px solid #e8eadc;border-radius:14px;overflow:hidden}
+    .credential-item{padding:17px 14px;border-right:1px solid #d9d8bd;color:#214d45;font-weight:750}
+    .credential-item:last-child{border-right:0}
+    .credential-item small{display:block;font-weight:400;color:#58645f;margin-top:5px}
+    @media(max-width:640px){.credential-strip{grid-template-columns:1fr}.credential-item{border-right:0;border-bottom:1px solid #d9d8bd}.credential-item:last-child{border-bottom:0}.hero{padding-top:22px}}
+
+    /* Requested profile-first layout */
+    .hero-grid{display:block!important;max-width:900px!important;margin:0 auto!important}
+    .hero-grid>div:first-child{display:none!important}
+    .portrait{width:100%!important;max-width:900px!important;margin:0 auto!important;text-align:center!important}
+    .portrait>div{width:100%!important}
+    .profile-photo{display:block!important;width:100%!important;height:clamp(240px,42vw,420px)!important;object-fit:cover!important;object-position:center 30%!important;border-radius:12px!important;margin:0 auto 16px!important}
+    .portrait strong{display:block!important;font-size:clamp(27px,4vw,38px)!important;margin:8px 0!important;color:#123f39!important}
+    .credential-strip{margin-top:18px!important}
+    .profile-full-name{display:block;margin-top:8px;color:#5b6470;font-size:14px}
+    .profile-skills{margin:18px auto 8px;font-size:clamp(15px,2vw,19px);font-weight:600;color:#293c3a}
+    .profile-credentials{max-width:760px;margin:0 auto 12px;font-size:clamp(15px,2vw,18px);line-height:1.8;color:#173f3a;font-weight:600}
+    @media(max-width:640px){.credential-strip{grid-template-columns:1fr!important}.profile-photo{height:260px!important}}
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <nav class="nav container" aria-label="প্রধান মেনু">
+      <a class="brand" href="#home">আতাউর রহমান আল হাবিবী</a>
+      <button class="menu-button" id="menuButton" aria-expanded="false" aria-controls="navLinks">মেনু ☰</button>
+      <div class="navlinks" id="navLinks">
+        <a href="#about">পরিচিতি</a><a href="#education">শিক্ষা</a><a href="#experience">অভিজ্ঞতা</a><a href="#journey">শিক্ষা ও কর্মজীবন</a><a href="#certificates">সনদ</a><a href="#course">কুরআন কোর্স</a><a href="#videos">ভিডিও</a><a href="#contact">যোগাযোগ</a>
+      </div>
+    </nav>
+  </div>
+
+  <main id="home">
+    <header class="hero">
+      <div class="container hero-grid">
+        <aside class="portrait" aria-label="প্রোফাইল ও পরিচিতি">
+          <div>
+            <img class="profile-photo" src="profile.jpg" alt="আতাউর রহমান আল হাবিবী">
+            <strong>আতাউর রহমান আল হাবিবী</strong>
+            <span style="display:block;font-size:16px;color:#53647b">Ataur Rahman Al Habibi</span>
+            <span style="display:block;font-size:18px;color:#53647b;margin-top:8px" lang="ar" dir="rtl">عطاء الرحمن الحبيبي</span>
+            <div class="profile-skills">কম্পিউটার বিশেষজ্ঞ • গ্রাফিক ডিজাইনার • আমিন (জরিপকারী)</div>
+            <div class="profile-credentials">হাফেজ কোরআন, দাওরায়ে হাদিস সম্পন্ন এবং উচ্চতর কোরআন গবেষণাকারী মুফাস্সির</div>
+            <span class="profile-full-name">পূর্ণ মূল নাম: মোহাম্মদ আতাউর রহমান</span>
+            <div class="actions" style="justify-content:center;margin-top:20px"><a class="button" href="#about">পরিচিতি ও যোগ্যতা দেখুন</a><a class="button secondary" href="#videos">কুরআন শিক্ষার ভিডিও দেখুন</a></div>
+          </div>
+        </aside>
+      </div>
+    </header>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head"><span class="kicker">পরিচিতি ও কর্মদক্ষতা</span><h2>শিক্ষাগত যোগ্যতা ও পেশাগত দক্ষতা</h2><p>জ্ঞান অর্জন, শিক্ষাদান ও মানবসেবাকে কেন্দ্র করে শিক্ষা ও কর্মজীবন।</p></div>
+        <div class="about-copy"><p><strong>পরিচিতি:</strong> আতাউর রহমান আল হাবিবী</p><p><strong>মূল নাম:</strong> মোহাম্মদ আতাউর রহমান</p><p><strong>উপাধি:</strong> আল হাবিবী</p><p>দীর্ঘ শিক্ষাজীবন, প্রাতিষ্ঠানিক দায়িত্ব, কুরআন শিক্ষা এবং প্রযুক্তিভিত্তিক দক্ষতা অর্জনের মাধ্যমে তিনি শিক্ষা ও মানবসেবায় কাজ করে যাচ্ছেন।</p><p>জীবনের নানা প্রতিকূলতার মধ্যেও পড়াশোনা চালিয়ে যাওয়া, দায়িত্ব পালন এবং জ্ঞান অর্জনের প্রতি অটুট থাকা শিক্ষা ও কর্মজীবনের অন্যতম বৈশিষ্ট্য।</p></div>
+      </div>
+    </section>
+
+    <section id="education" class="section-soft">
+      <div class="container">
+        <div class="section-head"><span class="kicker">শিক্ষা ও প্রশিক্ষণ</span><h2>শিক্ষাজীবন ও যোগ্যতা</h2><p>ধর্মীয় শিক্ষা, কুরআন-তাফসির, ভাষা ও প্রযুক্তি-সংক্রান্ত অধ্যয়ন ও প্রশিক্ষণ।</p></div>
+        <div class="grid">
+          <article class="card"><div class="iconbox" aria-hidden="true">📖</div><h3>হাফেজ মাওলানা মুফাস্সির</h3><p><strong>৩০ পারা পবিত্র কুরআন হেফজ সম্পন্ন করেন</strong> — দারুল উলূম বারোকোট মাদ্রাসা, গোলাপগঞ্জ, সিলেট।</p><p><strong>মাওলানা (মাস্টার্স) সম্পন্ন করেন</strong> — আল-জামিয়াতুল আহলিয়া দারুল উলূম মুঈনুল ইসলাম, হাটহাজারী, চট্টগ্রাম।</p><p><strong>তাফসীরশাস্ত্রে উচ্চতর শিক্ষা সম্পন্ন করেন</strong> — দারুল উলূম মুঈনুল ইসলাম, হাটহাজারী, চট্টগ্রাম।</p><p><strong>ক্বারী সনদ (কেরাত সম্পন্ন করেন)</strong> — আঞ্জুমানে তা'লীমুল কুরআন শিক্ষা বোর্ড, সিলেট।</p><p><strong>আরবি সাহিত্য কোর্স সম্পন্ন করেন</strong> — দারুল উলুম ঢাকা, মক্কি নগর ভাঙ্গা ব্রিজ, টঙ্গী, গাজীপুর, ঢাকা।</p></article>
+          <article class="card"><div class="iconbox" aria-hidden="true">📚</div><h3>হাদিস বিজ্ঞান</h3><p><strong>Science of Hadith</strong> — আন্তর্জাতিক ইসলামী বিশ্ববিদ্যালয় চট্টগ্রাম (IIUC)।</p><p>অনার্স ও মাস্টার্স পর্যায়ের শিক্ষা চলমান।</p></article>
+          <article class="card"><div class="iconbox" aria-hidden="true">🎓</div><h3>ভাষা ও প্রশিক্ষণ</h3><p>English Speaking Course — মাহফুজ ইংলিশ স্পোকিং।</p><p>চট্টগ্রাম নূরানী বোর্ডের ৪৫ দিনব্যাপী নূরানী প্রশিক্ষণ।</p></article>
+          <article class="card"><div class="iconbox" aria-hidden="true">💻</div><h3>কম্পিউটার ও ডিজিটাল প্রযুক্তি</h3><p>হাটহাজারী কম্পিউটার একাডেমি থেকে প্রশিক্ষণ।</p><div class="tag-list"><span class="tag">Office Management</span><span class="tag">Graphic Design</span><span class="tag">Digital Technology</span><span class="tag">Computer Training</span></div></article>
+          <article class="card"><div class="iconbox" aria-hidden="true">🧩</div><h3>ব্যবহারিক দক্ষতা</h3><p>কম্পিউটার ও ডিজিটাল প্রযুক্তির ব্যবহারিক কাজে অভিজ্ঞতা।</p><p>শিক্ষাপ্রতিষ্ঠান পরিচালনা ও শিক্ষাদানে কাজের অভিজ্ঞতা।</p></article>
+          <article class="card"><div class="iconbox" aria-hidden="true">🤝</div><h3>শিক্ষা ও মানবসেবা</h3><p>কুরআন শিক্ষার সহজ ও আকর্ষণীয় পদ্ধতি নিয়ে কাজ, শিশুদের শিক্ষামূলক অনুশীলন এবং অসহায় ও এতিম শিশুদের কল্যাণে সহযোগিতা।</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container">
+        <div class="section-head"><span class="kicker">কর্মজীবন</span><h2>প্রাতিষ্ঠানিক কার্যক্রম</h2><p>বর্তমান কার্যক্রম ও পূর্বের কর্ম-অভিজ্ঞতা।</p></div>
+        <h3 class="subheading">বর্তমান</h3>
+        <div class="institution-grid">
+          <article class="institution"><h4>দারুল উলূম মডেল একাডেমি</h4><p>টঙ্গী, গাজীপুর</p></article>
+          <article class="institution"><h4>তাহফিজুল কুরআন মাদ্রাসা ও এতিমখানা</h4><p>পশ্চিম শংকর, ঢাকা</p><p><strong>পরিচালক — ২০২২ সাল থেকে বর্তমান</strong></p></article>
+          <article class="institution"><h4>আতাউর রহমান ট্রাভেলস</h4><p>ব্যক্তিগত প্রতিষ্ঠান/কার্যক্রম</p></article>
+        </div>
+        <h3 class="subheading">পূর্বের অভিজ্ঞতা</h3>
+        <div class="institution-grid">
+          <article class="institution"><h4>তা'মীরুল উম্মাহ মাদ্রাসা</h4><p>আগ্রাবাদ, বড় পুল, চট্টগ্রাম — পূর্বে পরিচালনার দায়িত্বে।</p></article>
+          <article class="institution"><h4>প্যন্দং হেদায়েতুল ইসলাম দাখিল মাদ্রাসা</h4><p>সিনিয়র শিক্ষক ও হিফজ বিভাগের প্রধান পরিচালক।</p></article>
+          <article class="institution"><h4>মার্সি অরফানেজ সেন্টার বাংলাদেশ</h4><p>পূর্বে প্রিন্সিপাল।</p></article>
+          <article class="institution"><h4>আলহুদা মহিলা মাদ্রাসা</h4><p>হাটহাজারী, চট্টগ্রাম — সিনিয়র শিক্ষক।</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="journey" class="section-soft">
+      <div class="container">
+        <div class="section-head"><span class="kicker">জীবনের গল্প</span><h2>শিক্ষা ও কর্মজীবন</h2><p>প্রতিকূলতার মধ্যেও শিক্ষা ও স্বপ্নের পথে এগিয়ে চলার অভিজ্ঞতা।</p></div>
+        <div class="timeline">
+          <article class="timeline-item"><p>শিক্ষা ও কর্মজীবন কখনোই সহজ ছিল না। শৈশবেই তিনি শিখেছেন—সবাই আশ্রয় পায়, কিন্তু সবাই আশ্রয়ের ওপর দাঁড়িয়ে পথ চলতে পারে না। বাবার পূর্ণ স্নেহ-ছায়া পাননি; তাই খুব অল্প বয়সেই নিজের পথ নিজেকেই খুঁজে নিতে হয়েছে।</p></article>
+          <article class="timeline-item"><p>স্কুলজীবনে গাইড কেনার সামর্থ্য ছিল না। মূল বই আর নিজের পরিশ্রমকেই সঙ্গী করে পড়েছেন এবং ভালো ফলাফল অর্জন করেছেন। মাদ্রাসাজীবনে মাত্র ১৩ বছর বয়সে সংসারের দায়িত্ব কাঁধে নিতে হয়েছে। মায়ের খাবার ও চিকিৎসার দায়িত্বও তখন তাঁর ওপর ছিল। ছোট বোনের পড়াশোনার দায়িত্ব সামলেও নিজের পড়াশোনা থামাননি।</p></article>
+          <article class="timeline-item"><p>২০০৪ সালে ১৭ কিলোমিটার দূরের প্রতিষ্ঠানে যেতে ভাড়া লাগত ১৯ টাকা, অথচ হাতে থাকত ৮–১০ টাকা। তাই নৌপথে ৫ টাকা খরচ করে বাকিটা পথ হেঁটে যেতেন। পরে প্রায় ৯৫ কিলোমিটার দূরে পড়তে গিয়েছেন—ভাড়া ছিল ৭৫ টাকা, হাতে থাকত ১০০–১২০ টাকা; অথচ সহপাঠীদের কারও কারও হাতে থাকত ৮০০–৯০০ টাকা। পার্থক্য ছিল সামর্থ্যে, কিন্তু স্বপ্নে নয়।</p></article>
+          <article class="timeline-item"><p>২০১৬ সালে পবিত্র হজের সফরে মদিনা বিশ্ববিদ্যালয়ে কয়েকটি ক্লাস করার সুযোগ হয়। সেখানেই উচ্চশিক্ষার আকাঙ্ক্ষা আরও গভীর হয়; তাঁর মনে জাগে দারুল উলূম দেওবন্দে পড়ার স্বপ্ন।</p></article>
+          <article class="timeline-item"><p>২০১৭ সালে শিক্ষার উদ্দেশ্যে আবার বেরিয়ে পড়েন। এরপর দারুল উলূম মুঈনুল ইসলাম, হাটহাজারী, চট্টগ্রাম এবং ভারতের বিভিন্ন শিক্ষাপ্রতিষ্ঠানে মিলিয়ে প্রায় পাঁচ বছর কাটে। দীর্ঘ এই সময়ে বাড়িতে ফেরেননি—জ্ঞান অর্জনই ছিল তাঁর একমাত্র সাধনা।</p></article>
+          <article class="timeline-item"><p>পাঁচ বছর দেশ ও বিদেশে (ইন্ডিয়া) পড়াশোনার পর বাংলাদেশের সর্বোচ্চ রেজাল্ট অর্জন করে আল-হুদা মহিলা মাদ্রাসায় সিনিয়র শিক্ষক হিসেবে নিয়োগ পান। তার পরই কুমিল্লা জেলার বুড়িচং থেকে সাদকপুর মাদ্রাসার প্রিন্সিপাল হওয়ার অনুরোধ আসে এবং জামে মসজিদে ইমাম ও খতিবের দায়িত্ব গ্রহণ করতে বাধ্য করা হয়। অভাব তাঁর পথকে কঠিন করেছে, কিন্তু থামাতে পারেনি। তাঁর অর্জনের পেছনে শুধু সনদ আছে এমন নয়; আছে দীর্ঘ এক সংগ্রামের গল্প।</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="certificates" class="section-soft">
+      <div class="container">
+        <div class="section-head"><span class="kicker">যোগ্যতার প্রমাণ</span><h2>সনদ গ্যালারি</h2><p>শিক্ষাগত যোগ্যতা ও প্রশিক্ষণের সনদসমূহ। প্রতিটি সনদ বড় করে দেখতে ছবিতে ক্লিক করুন।</p></div>
+        <div class="certificate-grid">
+          <article class="card"><a href="certificate-1.jpg" target="_blank" rel="noopener"><img class="certificate-image" src="certificate-1.jpg" alt="হেফজ সনদ"></a><h3>হেফজ সনদ</h3></article>
+          <article class="card"><a href="certificate-2.jpg" target="_blank" rel="noopener"><img class="certificate-image" src="certificate-2.jpg" alt="চেয়ারম্যান সনদ"></a><h3>চেয়ারম্যান সনদ</h3></article>
+          <article class="card"><a href="certificate-3.jpg" target="_blank" rel="noopener"><img class="certificate-image" src="certificate-3.jpg" alt="তাফসির সনদ"></a><h3>তাফসির সনদ</h3></article>
+          <article class="card"><a href="certificate-4.jpg" target="_blank" rel="noopener"><img class="certificate-image" src="certificate-4.jpg" alt="দাওরায়ে হাদিস মাস্টার্স সনদ"></a><h3>দাওরায়ে হাদিস মাস্টার্স সনদ</h3></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="course" class="section-soft">
+      <div class="container">
+        <div class="section-head"><span class="kicker">শুরু থেকে কুরআন শিক্ষা</span><h2>৩০ ক্লাসে শুদ্ধ কুরআন শিক্ষা</h2><p>যাঁরা একেবারে শুরু থেকে কুরআন পড়া শিখতে চান, তাঁদের জন্য ধাপে ধাপে সাজানো একটি প্রাথমিক শিক্ষা কোর্স।</p></div>
+        <div class="grid">
+          <article class="card"><div class="iconbox" aria-hidden="true">📖</div><h3>কোর্সের লক্ষ্য</h3><p>শিক্ষার্থীদের কুরআন পড়ার ভিত্তি গড়ে তোলা, সঠিক উচ্চারণের অনুশীলন করানো এবং পরিচিত ভুলগুলো সংশোধনে সহায়তা করা।</p></article>
+          <article class="card"><div class="iconbox" aria-hidden="true">🪜</div><h3>ধাপে ধাপে পাঠ</h3><p>সহজ থেকে পরবর্তী ধাপে অগ্রসর হওয়া, নিয়মিত অনুশীলন এবং শিক্ষকের নির্দেশনা অনুসরণ করে শেখার ব্যবস্থা।</p></article>
+          <article class="card"><div class="iconbox" aria-hidden="true">🎥</div><h3>তাঁর তৈরি নমুনা ভিডিও</h3><p>তাঁর পাঠদানের ধরন সম্পর্কে ধারণা পেতে নিচের ভিডিওটি দেখুন। ৩০ ক্লাসে অগ্রগতি শিক্ষার্থীর পূর্বপ্রস্তুতি ও নিয়মিত অনুশীলনের ওপর নির্ভর করবে।</p><a class="button secondary" href="https://youtu.be/Hic889bHumE" target="_blank" rel="noopener noreferrer">YouTube-এ ভিডিও দেখুন ↗</a></article>
+        </div>
+        <div style="margin-top:24px;text-align:center"><a class="button" href="#about">বক্তা ও প্রশিক্ষকের পরিচিতি দেখুন ↗</a></div>
+      </div>
+    </section>
+
+    <section id="videos">
+      <div class="container">
+        <div class="section-head"><span class="kicker">ভিডিও</span><h2>ভিডিও সংকলন</h2><p>প্রতিষ্ঠান ও শিক্ষামূলক কার্যক্রমের ভিডিও।</p></div>
+        <div class="video-grid">
+          <article class="card video-card"><div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/PKvKmUnVMuw" title="দারুল উলুম মডেল একাডেমি ২০২১" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><div class="video-title">দারুল উলুম মডেল একাডেমি ২০২১</div></article>
+          <article class="card video-card"><div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/QPqZms9hck8" title="তা'মীরুল উম্মাহ মাদ্রাসা — চট্টগ্রাম" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><div class="video-title">তা'মীরুল উম্মাহ মাদ্রাসা — চট্টগ্রাম</div></article>
+          <article class="card video-card"><div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/6b6VeAwgzdE" title="তাহফিজুল কুরআন মাদরাসা" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><div class="video-title">তাহফিজুল কুরআন মাদরাসা</div></article>
+          <article class="card video-card"><div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/2w1QyCGWSWo" title="নূরানী আকর্ষণীয় লেখা" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><div class="video-title">নূরানী আকর্ষণীয় লেখা</div></article>
+          <article class="card video-card"><div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/5CC-8HGZII0" title="আতাউর রহমান ট্রাভেলস" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><div class="video-title">আতাউর রহমান ট্রাভেলস</div></article>
+          <article class="card video-card"><div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/yaaFvkUmD14" title="স্মৃতির পাতায় ২০২২" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><div class="video-title">স্মৃতির পাতায় ২০২২</div></article>
+        </div>
+        <div style="text-align:center;margin-top:28px"><a class="button secondary" href="https://youtube.com/channel/UC2RTe_9XB_MCFUa8YFkIG-g" target="_blank" rel="noopener noreferrer">YouTube চ্যানেল দেখুন ↗</a></div>
+      </div>
+    </section>
+
+    <section class="section-soft">
+      <div class="container"><div class="section-head"><span class="kicker">ভবিষ্যৎ পরিকল্পনা</span><h2>একটি স্থায়ী শিক্ষাপ্রতিষ্ঠানের স্বপ্ন</h2></div><div class="future"><h3>নিজস্ব জমিতে স্থায়ী প্রতিষ্ঠান</h3><p>নিজস্ব জমিতে একটি স্থায়ী ও সুসংগঠিত প্রতিষ্ঠান গড়ে তোলার স্বপ্ন রয়েছে—যেখানে শিক্ষা, কুরআন শিক্ষা ও মানবিক সেবাকে আরও বিস্তৃতভাবে এগিয়ে নেওয়া সম্ভব হবে।</p></div></div>
+    </section>
+
+    <section id="contact">
+      <div class="container"><div class="section-head"><span class="kicker">যোগাযোগ</span><h2>যুক্ত থাকুন</h2><p>শিক্ষামূলক কার্যক্রম ও ভিডিওর জন্য YouTube চ্যানেল দেখুন।</p></div><div class="contact-panel"><h3>আতাউর রহমান আল হাবিবী</h3><p>প্রিন্সিপাল • শিক্ষক ও শিক্ষাবিদ</p><a class="button" href="https://youtube.com/channel/UC2RTe_9XB_MCFUa8YFkIG-g" target="_blank" rel="noopener noreferrer">YouTube চ্যানেল ↗</a><p style="font-size:13px;margin:18px 0 0">Facebook ও অন্যান্য যোগাযোগের তথ্য পরে যুক্ত করা যাবে।</p></div></div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container"><strong>আতাউর রহমান আল হাবিবী</strong><p>শিক্ষা • কুরআন শিক্ষা • মানবসেবা</p><p>© <span id="year">2026</span> — সর্বস্বত্ব সংরক্ষিত</p></div></footer>
+  <script>
+    const menuButton=document.getElementById('menuButton');
+    const navLinks=document.getElementById('navLinks');
+    menuButton.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(open));});
+    navLinks.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{navLinks.classList.remove('open');menuButton.setAttribute('aria-expanded','false');}));
+    document.getElementById('year').textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>
