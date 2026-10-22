@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hafizataur1994.github.io/Ataur-Rahman-al-habibi-/sitemap.xml
