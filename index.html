@@ -383,7 +383,7 @@ html{scroll-padding-top:110px}
 .lp{position:absolute;left:0;right:0;top:100%;background:rgba(6,35,31,.98);border-bottom:2px solid var(--gold);padding:14px 4% 18px;max-height:68vh;overflow:auto}
 .lp .langbar{display:block;margin:0 auto;max-width:900px}.lp-top{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
 #lpSearch{display:block;width:100%;margin:12px 0;padding:9px 14px;border-radius:999px;border:1px solid rgba(201,162,74,.6);background:#0f3d36;color:#fff;font:inherit}
-.lp-g{color:var(--gold);font-weight:600;margin:12px 0 6px;font-size:14px}.lp-w{display:flex;flex-wrap:wrap;gap:6px}.lp-w button{padding:6px 14px 5px;font-size:14px;border-radius:16px;display:flex;flex-direction:column;align-items:center;gap:1px;line-height:1.25;min-width:84px}.lp-w button .ln{font-weight:600;color:#fff}.lp-w button .lc{font:600 10.5px/1.2 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;letter-spacing:.7px;text-transform:uppercase;color:var(--gold-soft,#f0d98f);opacity:.85;padding-top:2px;border-top:1px solid rgba(201,162,74,.35);margin-top:2px}.lp-w button:hover .ln,.lp-w button:hover .lc,.lp-w button.on .ln,.lp-w button.on .lc{color:var(--night,#06231f);opacity:1;border-top-color:rgba(6,35,31,.35)}
+.lp-g{color:var(--gold);font-weight:600;margin:12px 0 6px;font-size:14px}.lp-w{display:flex;flex-wrap:wrap;gap:6px}.lp-w button{padding:4px 12px;font-size:13px}
 .rm{margin:18px auto;max-width:760px}.rm>summary,.fold>summary{cursor:pointer;list-style:none;text-align:center;font-weight:600;border-radius:18px;padding:13px 20px;background:rgba(201,162,74,.16);border:1px solid var(--gold);color:var(--gold-soft);line-height:1.7}
 .fold>summary{background:var(--green);color:#fff;box-shadow:0 8px 22px rgba(6,35,31,.18)}.fold.gold>summary{background:var(--gold);color:var(--night)}
 summary::-webkit-details-marker{display:none}summary:after{content:" ▾"}details[open]>summary:after{content:" ▴"}
@@ -860,7 +860,27 @@ body:has(#lp:not([hidden])) .lang-top .lt-ar{transform:rotate(180deg)}
     body.modal-open{overflow:hidden}
     [inert]{pointer-events:none;user-select:none}
     .sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
-  </style>
+  
+.rc-img[data-full]{cursor:zoom-in;-webkit-tap-highlight-color:transparent;transition:transform .2s}
+.rc-img[data-full]:active{transform:scale(.96)}
+.pv{position:fixed;inset:0;z-index:140;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:64px 14px 24px;background:rgba(3,21,17,.98)}
+.pv[hidden]{display:none}
+.pv img{display:block;max-width:100%;max-height:76vh;object-fit:contain;border-radius:14px;border:2px solid var(--gold,#c9a24a);box-shadow:0 18px 50px rgba(0,0,0,.6);background:#0c2f2a}
+.pv-cap{color:#f3e7c4;font:700 17px "Hind Siliguri",sans-serif;text-align:center}
+.pv-x{position:absolute;top:max(14px,env(safe-area-inset-top));right:14px;width:44px;height:44px;border-radius:50%;border:1px solid rgba(201,162,74,.7);background:rgba(0,0,0,.5);color:#fff;font-size:20px;line-height:1;cursor:pointer}
+
+.rc-img[data-gal]{position:relative;cursor:zoom-in;-webkit-tap-highlight-color:transparent;transition:transform .2s}
+.rc-img[data-gal]:active{transform:scale(.96)}
+.rc-img[data-n]::after{content:attr(data-n) " ছবি";position:absolute;left:50%;bottom:6px;transform:translateX(-50%);padding:1px 8px;border-radius:10px;background:rgba(3,21,17,.74);color:#f3e7c4;font:700 10.5px "Hind Siliguri",sans-serif;white-space:nowrap;pointer-events:none}
+.pv{padding:60px 10px 20px}
+.pv-stage{position:relative;display:flex;justify-content:center;align-items:center;width:100%}
+.pv img{max-height:72vh}
+.pv-nav{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;border:1px solid rgba(201,162,74,.7);background:rgba(3,21,17,.72);color:#fff;font-size:28px;line-height:1;padding:0 0 3px;cursor:pointer;z-index:2}
+.pv-prev{left:6px}.pv-next{right:6px}
+.pv-count{color:#c9b98a;font:600 14px "Hind Siliguri",sans-serif}
+.pv.single .pv-nav,.pv.single .pv-count{display:none}
+.pv{background:rgba(3,21,17,.99)}
+</style>
   <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 
 <style id="button-polish-v2">
@@ -1107,8 +1127,27 @@ body:has(#lp:not([hidden])) .lang-top .lt-ar{transform:rotate(180deg)}
 @media(max-width:400px){.hero-roles .hr[data-th="it"] .hb[data-k="tin"]:not(.sec),.hero-roles .hr[data-th="it"] .hb[data-k="license"]:not(.sec),.hero-roles .hr[data-th="it"] .hb[data-k="om_lic"]:not(.sec){background:linear-gradient(rgba(6,35,31,.08) 1px,transparent 1px) 0 0/9px 9px,linear-gradient(90deg,rgba(6,35,31,.08) 1px,transparent 1px) 0 0/9px 9px,linear-gradient(145deg,#a6efe0 0%,#5fd3c0 55%,#2aa795 100%)!important;padding-right:9px!important}.hero-roles .hr[data-th="gfx"] .hb[data-k="tin"]:not(.sec),.hero-roles .hr[data-th="gfx"] .hb[data-k="license"]:not(.sec),.hero-roles .hr[data-th="gfx"] .hb[data-k="om_lic"]:not(.sec){background:radial-gradient(rgba(6,35,31,.14) 1px,transparent 1.3px) 0 0/8px 8px,linear-gradient(145deg,#f6e6b0 0%,#e0bf68 55%,#c9a24a 100%)!important;padding-right:9px!important}.hero-roles .hr[data-th="amin"] .hb[data-k="tin"]:not(.sec),.hero-roles .hr[data-th="amin"] .hb[data-k="license"]:not(.sec),.hero-roles .hr[data-th="amin"] .hb[data-k="om_lic"]:not(.sec){background:repeating-linear-gradient(135deg,rgba(6,35,31,.07) 0 1px,transparent 1px 7px),linear-gradient(145deg,#d9e6b0 0%,#b4cc82 55%,#8fae5e 100%)!important;padding-right:9px!important}.hero-roles .hr[data-th="org"] .hb[data-k="tin"]:not(.sec),.hero-roles .hr[data-th="org"] .hb[data-k="license"]:not(.sec),.hero-roles .hr[data-th="org"] .hb[data-k="om_lic"]:not(.sec){background:radial-gradient(circle at 78% 22%,rgba(255,255,255,.38),transparent 42%),radial-gradient(circle at 12% 90%,rgba(255,255,255,.22),transparent 38%),linear-gradient(145deg,#9fe6c0 0%,#52c28e 55%,#259a6b 100%)!important;padding-right:9px!important}.hero-roles .hr[data-th="trv"] .hb[data-k="tin"]:not(.sec),.hero-roles .hr[data-th="trv"] .hb[data-k="license"]:not(.sec),.hero-roles .hr[data-th="trv"] .hb[data-k="om_lic"]:not(.sec){background:radial-gradient(circle at 18% 95%,rgba(255,255,255,.45),transparent 36%),radial-gradient(circle at 88% 88%,rgba(255,255,255,.32),transparent 32%),linear-gradient(145deg,#b6e2e6 0%,#6bbfc9 55%,#3e9aa8 100%)!important;padding-right:9px!important}}
 @media(prefers-reduced-motion:reduce){.hero-roles .hr[data-th] .hb::after{animation:none!important}}
 </style>
+<style id="role-cards-v5">
+/* ===== V5: role cards — circle photo/icon on the left, title + ONE big button on the right ===== */
+.hero-roles .rg>.rc{display:flex;align-items:center;gap:16px;margin:12px 16px 0;padding:14px;border-radius:22px;border:1px solid rgba(201,162,74,.45);background:rgba(6,35,31,.6);text-align:left}
+.hero-roles .rg>.rc:last-child{margin-bottom:20px}
+.rc.tech{border-color:rgba(93,202,165,.5);background:rgba(8,40,34,.62)}
+.rc-img{flex:none;width:104px;height:104px;border-radius:50%;padding:4px;display:grid;place-items:center;overflow:hidden;background:radial-gradient(circle at 30% 25%,#2a6f62,#0c2f2a 70%);border:3px solid var(--gold);box-shadow:0 0 0 5px rgba(201,162,74,.16),0 10px 22px rgba(0,0,0,.4),inset 0 2px 8px rgba(255,255,255,.12)}
+.rc.tech .rc-img{border-color:#5dcaa5;box-shadow:0 0 0 5px rgba(93,202,165,.16),0 10px 22px rgba(0,0,0,.4),inset 0 2px 8px rgba(255,255,255,.12)}
+.rc-img img{display:block;width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:50% 30%}
+.rc-emoji{font-size:48px;line-height:1}
+.rc-body{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:10px}
+.rc-t{display:block;color:#fff;font-family:"Hind Siliguri",sans-serif;font-size:18px;font-weight:700;line-height:1.35}
+.hero-roles .rc .rcb{display:flex!important;align-items:center;justify-content:center;gap:8px;width:100%;min-height:52px;padding:10px 12px!important;border:0!important;border-radius:16px!important;font:800 17px/1.2 "Hind Siliguri",sans-serif!important;white-space:nowrap;text-decoration:none!important;color:#06231f!important;background:linear-gradient(145deg,#f6e6b0 0%,#e0bf68 55%,#c9a24a 100%)!important;box-shadow:0 8px 18px rgba(201,162,74,.28),inset 0 1px 0 rgba(255,255,255,.5)!important;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:transform .2s,box-shadow .2s}
+.hero-roles .rc.tech .rcb{background:linear-gradient(145deg,#a6efe0 0%,#5dcaa5 55%,#2aa795 100%)!important;box-shadow:0 8px 18px rgba(93,202,165,.28),inset 0 1px 0 rgba(255,255,255,.5)!important}
+.hero-roles .rc .rcb::before,.hero-roles .rc .rcb::after{content:none!important}
+.hero-roles .rc .rcb:hover{transform:translateY(-1px)}
+.hero-roles .rc .rcb:active{transform:scale(.97)}
+.hero-roles .rc .rcb[hidden]{display:none!important}
+@media(max-width:380px){.hero-roles .rg>.rc{gap:12px;padding:12px;margin:10px 12px 0}.rc-img{width:88px;height:88px}.rc-emoji{font-size:40px}.rc-t{font-size:16.5px}.hero-roles .rc .rcb{font-size:16px!important;min-height:48px}}
+</style>
 
-<style>
+<style id="badge-v1">
 /* ===== পরিচয়-ব্যাজে চাপলে সনদ/ভিডিও ===== */
 .np-tag span[data-role]{cursor:pointer;-webkit-tap-highlight-color:transparent;transition:transform .15s,filter .2s,background .2s,color .2s,box-shadow .2s}
 .np-tag span[data-role]::after{content:"▾";font-size:.7em;margin-inline-start:6px;display:inline-block;opacity:.75;transition:transform .2s}
@@ -1122,15 +1161,15 @@ body:has(#lp:not([hidden])) .lang-top .lt-ar{transform:rotate(180deg)}
 .rcard{margin:12px auto 4px;max-width:420px;padding:12px;border:1px solid rgba(201,162,74,.6);border-radius:18px;background:linear-gradient(160deg,rgba(255,255,255,.09),rgba(255,255,255,.03));box-shadow:0 12px 28px rgba(0,0,0,.28);animation:rcIn .28s ease both;text-align:center}
 .rcard[hidden]{display:none}
 @keyframes rcIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
-.rc-thumb{position:relative;display:block;width:100%;padding:0;border:0;background:rgba(0,0,0,.25);border-radius:12px;overflow:hidden;cursor:zoom-in;min-height:90px}
-.rc-img{display:block;width:100%;max-height:260px;object-fit:contain}
-.rc-play{position:absolute;inset:0;display:grid;place-items:center;font-size:44px;color:#fff;background:rgba(0,0,0,.3)}
-.rc-t{margin:10px 0 2px;font:700 16px/1.5 "Noto Serif Bengali","Hind Siliguri",serif;color:var(--gold-soft,#f0d98f)}
-.rc-s{margin:0;font-size:13px;line-height:1.5;color:#c9ddd6}
-.rc-act{display:flex;gap:8px;justify-content:center;margin-top:10px;flex-wrap:wrap}
-.rc-act button{border:1px solid rgba(201,162,74,.7);border-radius:999px;padding:6px 16px;font:600 14px "Hind Siliguri",sans-serif;cursor:pointer;background:transparent;color:#fff}
-.rc-act .rc-go{background:var(--gold,#c9a24a);color:var(--night,#06231f);border-color:var(--gold,#c9a24a)}
-.rc-err{padding:22px 10px;font-size:13px;color:#c9ddd6}
+.rcd-thumb{position:relative;display:block;width:100%;padding:0;border:0;background:rgba(0,0,0,.25);border-radius:12px;overflow:hidden;cursor:zoom-in;min-height:90px}
+.rcd-img{display:block;width:100%;max-height:260px;object-fit:contain}
+.rcd-play{position:absolute;inset:0;display:grid;place-items:center;font-size:44px;color:#fff;background:rgba(0,0,0,.3)}
+.rcd-t{margin:10px 0 2px;font:700 16px/1.5 "Noto Serif Bengali","Hind Siliguri",serif;color:var(--gold-soft,#f0d98f)}
+.rcd-s{margin:0;font-size:13px;line-height:1.5;color:#c9ddd6}
+.rcd-act{display:flex;gap:8px;justify-content:center;margin-top:10px;flex-wrap:wrap}
+.rcd-act button{border:1px solid rgba(201,162,74,.7);border-radius:999px;padding:6px 16px;font:600 14px "Hind Siliguri",sans-serif;cursor:pointer;background:transparent;color:#fff}
+.rcd-act .rcd-go{background:var(--gold,#c9a24a);color:var(--night,#06231f);border-color:var(--gold,#c9a24a)}
+.rcd-err{padding:22px 10px;font-size:13px;color:#c9ddd6}
 .np-hint{margin:0 0 10px;font-size:12px;letter-spacing:.6px;color:var(--gold-soft,#f0d98f)}
 .np-tag.gold{gap:10px}
 .np-tag.gold span[data-role]{outline:1px solid rgba(240,217,143,.85);outline-offset:3px}
@@ -1140,26 +1179,11 @@ body:has(#lp:not([hidden])) .lang-top .lt-ar{transform:rotate(180deg)}
 .np-tag.gold{flex-wrap:nowrap;gap:8px}
 .np-tag.gold span{padding:6px clamp(8px,2.6vw,14px);font-size:clamp(14px,4.3vw,19px);white-space:nowrap}
 .np-tag.gold span[data-role]::after{margin-inline-start:4px}
-</style>
-<style id="pp-gallery-v1">
-/* হিরো সারি: বড় গোল ছবি + নাম + বোতাম (ছুঁলে ছবি বদলায়, অটো নয়) */
-.hero-roles .rg>.hr.pp-card{display:flex!important;align-items:center;gap:16px;padding:14px!important}
-.pp-wrap{position:relative;flex:none;display:block;margin-bottom:8px}
-.pp-body{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:10px}
-.hero-roles .pp-card .hr-t{margin:0!important;font-size:18px!important;line-height:1.35}
-.hero-roles .pp-card .hr-b{grid-template-columns:1fr!important;gap:8px!important}
-.hero-roles .pp-card .hr-b>.hb:nth-child(3):last-child{grid-column:auto!important}
-.pp-img{display:grid;place-items:center;width:104px;height:104px;border-radius:50%;padding:4px;overflow:hidden;background:radial-gradient(circle at 30% 25%,#2a6f62,#0c2f2a 70%);border:3px solid var(--gold,#c9a24a);box-shadow:0 0 0 5px rgba(201,162,74,.16),0 10px 22px rgba(0,0,0,.4),inset 0 2px 8px rgba(255,255,255,.12)}
-.hr.tech .pp-img{border-color:#5dcaa5;box-shadow:0 0 0 5px rgba(93,202,165,.16),0 10px 22px rgba(0,0,0,.4),inset 0 2px 8px rgba(255,255,255,.12)}
-.pp-img img{display:block;width:100%;height:100%;border-radius:50%;object-fit:cover;transition:opacity .22s ease}
-.pp-emoji{font-size:48px;line-height:1}
-.pp-multi{cursor:pointer;-webkit-tap-highlight-color:transparent;transition:transform .15s}
-.pp-multi:active{transform:scale(.96)}
-.pp-multi.sw img{opacity:0}
-.pp-n{position:absolute;left:50%;bottom:-10px;transform:translateX(-50%);padding:2px 11px;border-radius:999px;background:var(--gold,#c9a24a);color:#06231f;font:700 12.5px/1.5 "Hind Siliguri",sans-serif;white-space:nowrap;box-shadow:0 4px 10px rgba(0,0,0,.4);pointer-events:none}
-.hr.tech .pp-n{background:#5dcaa5}
-@media(max-width:380px){.hero-roles .rg>.hr.pp-card{gap:12px;padding:12px!important}.pp-img{width:88px;height:88px}.pp-emoji{font-size:40px}.hero-roles .pp-card .hr-t{font-size:16.5px!important}}
-@media(prefers-reduced-motion:reduce){.pp-img img,.pp-multi{transition:none}}
+
+.lp-w button{padding:6px 14px 5px;font-size:14px;border-radius:16px;display:flex;flex-direction:column;align-items:center;gap:1px;line-height:1.25;min-width:84px}
+.lp-w button .ln{font-weight:600;color:#fff}
+.lp-w button .lc{font:600 10.5px/1.2 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;letter-spacing:.7px;text-transform:uppercase;color:var(--gold-soft,#f0d98f);opacity:.85;padding-top:2px;border-top:1px solid rgba(201,162,74,.35);margin-top:2px}
+.lp-w button:hover .ln,.lp-w button:hover .lc,.lp-w button.on .ln,.lp-w button.on .lc{color:var(--night,#06231f);opacity:1;border-top-color:rgba(6,35,31,.35)}
 </style>
 </head>
 <body>
@@ -1194,15 +1218,15 @@ body:has(#lp:not([hidden])) .lang-top .lt-ar{transform:rotate(180deg)}
           <div class="orn" aria-hidden="true"><span></span>❖<span></span></div>
           <div class="hero-roles">
 <details class="rg"><summary><span class="ic">🕌</span><span class="tx">ইলম ও দ্বীনি খেদমত<small>প্রিন্সিপাল • মুফাসসির • শিক্ষক</small></span></summary>
-<div class="hr gold pp-card"><span class="pp-wrap"><span class="pp-img pp-multi" data-rv="principal" role="button" tabindex="0" aria-label="প্রিন্সিপাল — ছবি বদলাতে ছুঁয়ে দিন"><img src="img/principal.jpg" alt="প্রিন্সিপাল" width="120" height="120" loading="lazy" decoding="async" style="object-position:50% 28%" onerror="var p=this.parentNode;p.className='pp-img pp-emoji';p.removeAttribute('role');p.removeAttribute('tabindex');p.setAttribute('aria-hidden','true');p.textContent='🏫';var n=p.parentNode&&p.parentNode.querySelector('.pp-n');if(n)n.remove()"></span><span class="pp-n" aria-hidden="true">২টি ছবি</span></span><span class="pp-body"><span class="hr-t">প্রিন্সিপাল</span><span class="hr-b"><button type="button" class="tr-btn hb" data-v="PKvKmUnVMuw" data-t="দারুল উলুম মডেল একাডেমি ২০২১">▶ ভিডিও</button><a class="tr-btn hb sec" href="#roles">আরও</a></span></span></div>
-<div class="hr pp-card"><span class="pp-wrap"><span class="pp-img pp-multi" data-rv="tafsir" role="button" tabindex="0" aria-label="কুরআনের মুফাসসির — ছবি বদলাতে ছুঁয়ে দিন"><img src="img/tafsir.jpg" alt="কুরআনের মুফাসসির" width="120" height="120" loading="lazy" decoding="async" style="object-position:31% 50%" onerror="var p=this.parentNode;p.className='pp-img pp-emoji';p.removeAttribute('role');p.removeAttribute('tabindex');p.setAttribute('aria-hidden','true');p.textContent='📖';var n=p.parentNode&&p.parentNode.querySelector('.pp-n');if(n)n.remove()"></span><span class="pp-n" aria-hidden="true">২টি ছবি</span></span><span class="pp-body"><span class="hr-t">কুরআনের মুফাসসির</span><span class="hr-b"><button type="button" class="tr-btn hb" data-k="tafsir" hidden>সনদ</button><button type="button" class="tr-btn hb" data-k="char_tafsir" hidden>চারিত্রিক</button></span></span></div>
-<div class="hr pp-card"><span class="pp-wrap"><span class="pp-img pp-multi" data-rv="course" role="button" tabindex="0" aria-label="সংক্ষিপ্ত সময়ে কুরআন শিক্ষা — ছবি বদলাতে ছুঁয়ে দিন"><img src="img/course.jpg" alt="সংক্ষিপ্ত সময়ে কুরআন শিক্ষা" width="120" height="120" loading="lazy" decoding="async" style="object-position:50% 50%" onerror="var p=this.parentNode;p.className='pp-img pp-emoji';p.removeAttribute('role');p.removeAttribute('tabindex');p.setAttribute('aria-hidden','true');p.textContent='🌙';var n=p.parentNode&&p.parentNode.querySelector('.pp-n');if(n)n.remove()"></span><span class="pp-n" aria-hidden="true">৩টি ছবি</span></span><span class="pp-body"><span class="hr-t">সংক্ষিপ্ত সময়ে কুরআন শিক্ষা</span><span class="hr-b"><button type="button" class="tr-btn hb" data-v="Hic889bHumE" data-t="৩০ ক্লাসে কুরআন শিক্ষা — নমুনা ভিডিও">▶ ভিডিও</button><a class="tr-btn hb sec" href="#course">কোর্স</a></span></span></div>
+<div class="rc"><span class="rc-img" data-gal="principal-1.jpg|principal-2.jpg" data-start="1" data-n="২" data-cap="প্রিন্সিপাল" role="button" tabindex="0" aria-label="প্রিন্সিপাল — ছবি বড় করে দেখুন"><img src="principal.jpg" alt="প্রিন্সিপাল" width="120" height="120" loading="lazy" decoding="async" onerror="var p=this.parentNode;p.removeAttribute('data-gal');p.removeAttribute('data-n');p.removeAttribute('role');p.removeAttribute('tabindex');p.classList.add('rc-emoji');p.setAttribute('aria-hidden','true');p.textContent='🏫'"></span><span class="rc-body"><span class="rc-t">প্রিন্সিপাল</span><button type="button" class="tr-btn rcb" data-v="PKvKmUnVMuw" data-t="দারুল উলুম মডেল একাডেমি ২০২১">▶ ভিডিও দেখুন</button></span></div>
+<div class="rc"><span class="rc-img" data-gal="tafsir.jpg|tafsir-2.jpg" data-start="0" data-n="২" data-cap="কুরআনের মুফাসসির" role="button" tabindex="0" aria-label="কুরআনের মুফাসসির — ছবি বড় করে দেখুন"><img src="tafsir.jpg" alt="কুরআনের মুফাসসির" width="120" height="120" loading="lazy" decoding="async" onerror="var p=this.parentNode;p.removeAttribute('data-gal');p.removeAttribute('data-n');p.removeAttribute('role');p.removeAttribute('tabindex');p.classList.add('rc-emoji');p.setAttribute('aria-hidden','true');p.textContent='📖'"></span><span class="rc-body"><span class="rc-t">কুরআনের মুফাসসির</span><button type="button" class="tr-btn rcb" data-k="tafsir" hidden>📜 সনদ দেখুন</button></span></div>
+<div class="rc"><span class="rc-img" data-gal="course-1.jpg|course-2.jpg|course-3.jpg" data-start="1" data-n="৪" data-cap="সংক্ষিপ্ত সময়ে কুরআন শিক্ষা" role="button" tabindex="0" aria-label="সংক্ষিপ্ত সময়ে কুরআন শিক্ষা — ছবি বড় করে দেখুন"><img src="course.jpg" alt="সংক্ষিপ্ত সময়ে কুরআন শিক্ষা" width="120" height="120" loading="lazy" decoding="async" onerror="var p=this.parentNode;p.removeAttribute('data-gal');p.removeAttribute('data-n');p.removeAttribute('role');p.removeAttribute('tabindex');p.classList.add('rc-emoji');p.setAttribute('aria-hidden','true');p.textContent='🌙'"></span><span class="rc-body"><span class="rc-t">সংক্ষিপ্ত সময়ে কুরআন শিক্ষা</span><a class="tr-btn rcb" href="#course">📘 কোর্স দেখুন</a></span></div>
 </details><details class="rg tech"><summary><span class="ic">💻</span><span class="tx">দক্ষতা ও মানবসেবা<small>প্রযুক্তি • জরিপ • চিকিৎসা • ট্রাভেলস</small></span></summary>
-<div class="hr tech pp-card" data-th="it"><span class="pp-wrap"><span class="pp-img pp-multi" data-rv="it" role="button" tabindex="0" aria-label="আইটি এক্সপার্ট — ছবি বদলাতে ছুঁয়ে দিন"><img src="img/it.jpg" alt="আইটি এক্সপার্ট" width="120" height="120" loading="lazy" decoding="async" style="object-position:35% 55%" onerror="var p=this.parentNode;p.className='pp-img pp-emoji';p.removeAttribute('role');p.removeAttribute('tabindex');p.setAttribute('aria-hidden','true');p.textContent='💻';var n=p.parentNode&&p.parentNode.querySelector('.pp-n');if(n)n.remove()"></span><span class="pp-n" aria-hidden="true">২টি ছবি</span></span><span class="pp-body"><span class="hr-t">আইটি এক্সপার্ট</span><span class="hr-b"><button type="button" class="tr-btn hb" data-k="computer" hidden>সনদ</button><a class="tr-btn hb sec" href="#education">বিস্তারিত</a></span></span></div>
-<div class="hr tech pp-card" data-th="gfx"><span class="pp-wrap"><span class="pp-img pp-multi" data-rv="graphic" role="button" tabindex="0" aria-label="গ্রাফিক্স ডিজাইনার — ছবি বদলাতে ছুঁয়ে দিন"><img src="img/graphic-card.jpg" alt="গ্রাফিক্স ডিজাইনার" width="120" height="120" loading="lazy" decoding="async" style="object-position:50% 50%" onerror="var p=this.parentNode;p.className='pp-img pp-emoji';p.removeAttribute('role');p.removeAttribute('tabindex');p.setAttribute('aria-hidden','true');p.textContent='🎨';var n=p.parentNode&&p.parentNode.querySelector('.pp-n');if(n)n.remove()"></span><span class="pp-n" aria-hidden="true">২টি ছবি</span></span><span class="pp-body"><span class="hr-t">গ্রাফিক্স ডিজাইনার</span><span class="hr-b"><button type="button" class="tr-btn hb" data-k="graphic" hidden>সনদ</button><a class="tr-btn hb sec" href="#education">বিস্তারিত</a></span></span></div>
-<div class="hr tech pp-card" data-th="amin"><span class="pp-wrap"><span class="pp-img pp-multi" data-rv="amin" role="button" tabindex="0" aria-label="আমিন সার্ভেয়ার — ছবি বদলাতে ছুঁয়ে দিন"><img src="img/amin.jpg" alt="আমিন সার্ভেয়ার" width="120" height="120" loading="lazy" decoding="async" style="object-position:50% 50%" onerror="var p=this.parentNode;p.className='pp-img pp-emoji';p.removeAttribute('role');p.removeAttribute('tabindex');p.setAttribute('aria-hidden','true');p.textContent='📐';var n=p.parentNode&&p.parentNode.querySelector('.pp-n');if(n)n.remove()"></span><span class="pp-n" aria-hidden="true">২টি ছবি</span></span><span class="pp-body"><span class="hr-t">আমিন সার্ভেয়ার</span><span class="hr-b"><button type="button" class="tr-btn hb" data-k="amin" hidden>সনদ</button><a class="tr-btn hb sec" href="#education">বিস্তারিত</a></span></span></div>
-<div class="hr tech pp-card" data-th="org"><span class="pp-wrap"><span class="pp-img" aria-hidden="true"><img src="img/organic.jpg" alt="অর্গানিক চিকিৎসা" width="120" height="120" loading="lazy" decoding="async" style="object-position:50% 50%" onerror="var p=this.parentNode;p.className='pp-img pp-emoji';p.removeAttribute('role');p.removeAttribute('tabindex');p.setAttribute('aria-hidden','true');p.textContent='🌿';var n=p.parentNode&&p.parentNode.querySelector('.pp-n');if(n)n.remove()"></span></span><span class="pp-body"><span class="hr-t">অর্গানিক চিকিৎসা</span><span class="hr-b"><button type="button" class="tr-btn hb" data-k="om_lic" hidden>লাইসেন্স</button><button type="button" class="tr-btn hb" data-k="tin" hidden>TIN সনদ</button><a class="tr-btn hb sec" href="#pharma">বিস্তারিত</a></span></span></div>
-<div class="hr tech pp-card" data-th="trv"><span class="pp-wrap"><span class="pp-img pp-multi" data-rv="travels" role="button" tabindex="0" aria-label="ট্রাভেলস এজেন্সির পরিচালক — ছবি বদলাতে ছুঁয়ে দিন"><img src="img/travels.jpg" alt="ট্রাভেলস এজেন্সির পরিচালক" width="120" height="120" loading="lazy" decoding="async" style="object-position:55% 45%" onerror="var p=this.parentNode;p.className='pp-img pp-emoji';p.removeAttribute('role');p.removeAttribute('tabindex');p.setAttribute('aria-hidden','true');p.textContent='✈️';var n=p.parentNode&&p.parentNode.querySelector('.pp-n');if(n)n.remove()"></span><span class="pp-n" aria-hidden="true">২টি ছবি</span></span><span class="pp-body"><span class="hr-t">ট্রাভেলস এজেন্সির পরিচালক</span><span class="hr-b"><button type="button" class="tr-btn hb" data-k="license" hidden>লাইসেন্স</button><button type="button" class="tr-btn hb" data-k="tin" hidden>TIN সনদ</button><a class="tr-btn hb sec" href="#travels">বিস্তারিত</a></span></span></div></details>
+<div class="rc tech"><span class="rc-img" data-gal="it-1.jpg|it-2.jpg" data-start="1" data-n="২" data-cap="আইটি এক্সপার্ট" role="button" tabindex="0" aria-label="আইটি এক্সপার্ট — ছবি বড় করে দেখুন"><img src="it.jpg" alt="আইটি এক্সপার্ট" width="120" height="120" loading="lazy" decoding="async" onerror="var p=this.parentNode;p.removeAttribute('data-gal');p.removeAttribute('data-n');p.removeAttribute('role');p.removeAttribute('tabindex');p.classList.add('rc-emoji');p.setAttribute('aria-hidden','true');p.textContent='💻'"></span><span class="rc-body"><span class="rc-t">আইটি এক্সপার্ট</span><button type="button" class="tr-btn rcb" data-k="computer" hidden>📜 সনদ দেখুন</button></span></div>
+<div class="rc tech"><span class="rc-img" data-gal="graphic-card-2.jpg" data-start="0" data-n="১" data-cap="গ্রাফিক্স ডিজাইনার" role="button" tabindex="0" aria-label="গ্রাফিক্স ডিজাইনার — ছবি বড় করে দেখুন"><img src="graphic-card.jpg" alt="গ্রাফিক্স ডিজাইনার" width="120" height="120" loading="lazy" decoding="async" onerror="var p=this.parentNode;p.removeAttribute('data-gal');p.removeAttribute('data-n');p.removeAttribute('role');p.removeAttribute('tabindex');p.classList.add('rc-emoji');p.setAttribute('aria-hidden','true');p.textContent='🎨'"></span><span class="rc-body"><span class="rc-t">গ্রাফিক্স ডিজাইনার</span><button type="button" class="tr-btn rcb" data-k="graphic" hidden>📜 সনদ দেখুন</button></span></div>
+<div class="rc tech"><span class="rc-img" data-gal="amin.jpg|amin-2.jpg" data-start="1" data-n="২" data-cap="আমিন সার্ভেয়ার" role="button" tabindex="0" aria-label="আমিন সার্ভেয়ার — ছবি বড় করে দেখুন"><img src="amin.jpg" alt="আমিন সার্ভেয়ার" width="120" height="120" loading="lazy" decoding="async" onerror="var p=this.parentNode;p.removeAttribute('data-gal');p.removeAttribute('data-n');p.removeAttribute('role');p.removeAttribute('tabindex');p.classList.add('rc-emoji');p.setAttribute('aria-hidden','true');p.textContent='📐'"></span><span class="rc-body"><span class="rc-t">আমিন সার্ভেয়ার</span><button type="button" class="tr-btn rcb" data-k="amin" hidden>📜 সনদ দেখুন</button></span></div>
+<div class="rc tech"><span class="rc-img" data-gal="organic-1.jpg|organic-2.jpg|organic-full.jpg" data-start="0" data-n="৩" data-cap="অর্গানিক চিকিৎসা" role="button" tabindex="0" aria-label="অর্গানিক চিকিৎসা — ছবি বড় করে দেখুন"><img src="organic.jpg" alt="অর্গানিক চিকিৎসা" width="120" height="120" loading="lazy" decoding="async" onerror="var p=this.parentNode;p.removeAttribute('data-gal');p.removeAttribute('data-n');p.removeAttribute('role');p.removeAttribute('tabindex');p.classList.add('rc-emoji');p.setAttribute('aria-hidden','true');p.textContent='🌿'"></span><span class="rc-body"><span class="rc-t">অর্গানিক চিকিৎসা</span><button type="button" class="tr-btn rcb" data-k="om_lic" hidden>📜 লাইসেন্স দেখুন</button><button type="button" class="tr-btn rcb" data-k="tin" hidden>🧾 TIN সনদ দেখুন</button></span></div>
+<div class="rc tech"><span class="rc-img" data-gal="travels-full.jpg" data-start="0" data-cap="ট্রাভেলস এজেন্সির পরিচালক" role="button" tabindex="0" aria-label="ট্রাভেলস এজেন্সির পরিচালক — ছবি বড় করে দেখুন"><img src="travels.jpg" alt="ট্রাভেলস এজেন্সির পরিচালক" width="120" height="120" loading="lazy" decoding="async" onerror="var p=this.parentNode;p.removeAttribute('data-gal');p.removeAttribute('data-n');p.removeAttribute('role');p.removeAttribute('tabindex');p.classList.add('rc-emoji');p.setAttribute('aria-hidden','true');p.textContent='✈️'"></span><span class="rc-body"><span class="rc-t">ট্রাভেলস এজেন্সির পরিচালক</span><button type="button" class="tr-btn rcb" data-k="license" hidden>📜 লাইসেন্স দেখুন</button><button type="button" class="tr-btn rcb" data-k="tin" hidden>🧾 TIN সনদ দেখুন</button></span></div></details>
 </div>
           <div class="orn" aria-hidden="true"><span></span>✦<span></span></div>
           <div class="actions"><a class="button" href="#education"><span class="ic">📜</span><span class="tx">যোগ্যতা ও সনদ<small>শিক্ষাগত যোগ্যতা ও সনদ দেখুন</small></span></a><a class="button secondary" href="#course" id="quranGo"><span class="ic">📖</span><span class="tx">কুরআন শিক্ষা<small>৩০ ক্লাসে শুদ্ধ কুরআন শিক্ষা</small></span></a><a class="button wa-hero" href="https://wa.me/8801610888622" target="_blank" rel="noopener noreferrer"><span class="ic">💬</span><span class="tx">হোয়াটসঅ্যাপে যোগাযোগ<small>সরাসরি মেসেজ করুন</small></span></a></div>
@@ -1448,7 +1472,8 @@ body:has(#lp:not([hidden])) .lang-top .lt-ar{transform:rotate(180deg)}
     <div class="cv-msg" id="cvMsg" role="status" aria-live="polite"></div>
   </div>
 
-  <div class="vm" id="vm" hidden role="dialog" aria-modal="true" aria-labelledby="vmT"><div class="vm-box"><div class="vm-top"><span id="vmT"></span><button type="button" id="vmClose" aria-label="বন্ধ করুন">✕</button></div><div class="vm-v"><iframe id="vmFrame" title="ভিডিও" allow="autoplay; encrypted-media; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe></div></div></div>
+  <div class="pv notranslate" id="pv" hidden role="dialog" aria-modal="true" aria-label="ছবি"><button type="button" class="pv-x" id="pvX" aria-label="বন্ধ করুন">✕</button><div class="pv-stage"><button type="button" class="pv-nav pv-prev" id="pvPrev" aria-label="আগের ছবি">‹</button><img id="pvImg" alt=""><button type="button" class="pv-nav pv-next" id="pvNext" aria-label="পরের ছবি">›</button></div><div class="pv-cap" id="pvCap"></div><div class="pv-count" id="pvCount"></div></div>
+<div class="vm" id="vm" hidden role="dialog" aria-modal="true" aria-labelledby="vmT"><div class="vm-box"><div class="vm-top"><span id="vmT"></span><button type="button" id="vmClose" aria-label="বন্ধ করুন">✕</button></div><div class="vm-v"><iframe id="vmFrame" title="ভিডিও" allow="autoplay; encrypted-media; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe></div></div></div>
 
   <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="ছবি বড় করে দেখা"><button class="lb-close" id="lbClose" aria-label="বন্ধ করুন">✕</button><img id="lbImg" alt=""></div>
 
@@ -1586,7 +1611,7 @@ body:has(#lp:not([hidden])) .lang-top .lt-ar{transform:rotate(180deg)}
     })();
 
     /* সনদের ছবি সুরক্ষা: রাইট-ক্লিক, ড্র্যাগ ও লং-প্রেস মেনু বন্ধ */
-    (function(){const S='.certificate-grid a,.certificate-image,.rc-img,#cvImg,#cvWrap,#lbImg,#lightbox';
+    (function(){const S='.certificate-grid a,.certificate-image,.rcd-img,.rc-img,#cvImg,#cvWrap,#lbImg,#lightbox';
       document.addEventListener('contextmenu',e=>{if(e.target.closest&&e.target.closest(S))e.preventDefault();},{passive:false});
       document.addEventListener('dragstart',e=>{if(e.target.closest&&e.target.closest(S))e.preventDefault();});
       document.querySelectorAll('.certificate-image,#cvImg,#lbImg').forEach(i=>i.setAttribute('draggable','false'));
@@ -1679,6 +1704,32 @@ if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(v)
 </script>
 <script>
 (function(){
+var pv=document.getElementById('pv');if(!pv)return;
+var im=document.getElementById('pvImg'),cp=document.getElementById('pvCap'),ct=document.getElementById('pvCount');
+var last=null,list=[],idx=0,cap='',tx=null,BN='০১২৩৪৫৬৭৮৯';
+function bn(n){return String(n).replace(/\d/g,function(d){return BN.charAt(d);});}
+function show(i){idx=(i+list.length)%list.length;cp.textContent=cap;ct.textContent=list.length>1?bn(idx+1)+' / '+bn(list.length):'';im.alt=cap;im.src=list[idx];
+ if(list.length>1){var nx=new Image();nx.src=list[(idx+1)%list.length];}}
+function openPv(el){var g=(el.getAttribute('data-gal')||'').split('|').filter(Boolean);if(!g.length)return;
+ list=g;cap=el.getAttribute('data-cap')||'';last=el;pv.classList.toggle('single',g.length<2);pv.hidden=false;
+ document.body.classList.add('modal-open');show(parseInt(el.getAttribute('data-start')||'0',10)||0);document.getElementById('pvX').focus();}
+function closePv(){pv.hidden=true;document.body.classList.remove('modal-open');im.removeAttribute('src');if(last&&last.focus)last.focus();}
+im.addEventListener('error',function(){cp.textContent='ছবিটি লোড হয়নি। একটু পরে আবার চেষ্টা করুন।';});
+document.addEventListener('click',function(e){
+ var t=e.target.closest('.rc-img[data-gal]');if(t){openPv(t);return;}
+ if(pv.hidden)return;
+ if(e.target.closest('#pvPrev')){show(idx-1);return;}
+ if(e.target.closest('#pvNext')){show(idx+1);return;}
+ if(e.target===pv||e.target.closest('#pvX'))closePv();});
+document.addEventListener('keydown',function(e){
+ if(!pv.hidden){if(e.key==='Escape'){closePv();return;}if(e.key==='ArrowLeft'){show(idx-1);return;}if(e.key==='ArrowRight'){show(idx+1);return;}}
+ if((e.key==='Enter'||e.key===' ')&&e.target.matches&&e.target.matches('.rc-img[data-gal]')){e.preventDefault();openPv(e.target);}});
+pv.addEventListener('touchstart',function(e){tx=e.touches[0].clientX;},{passive:true});
+pv.addEventListener('touchend',function(e){if(tx===null||list.length<2)return;var dx=e.changedTouches[0].clientX-tx;tx=null;if(Math.abs(dx)>50)show(dx<0?idx+1:idx-1);},{passive:true});
+})();
+</script>
+<script>
+(function(){
   var R={
     hifz:{t:'হিফজ সনদ',s:'৩০ পারা — বারোকোট মাদ্রাসা, সিলেট',img:'certificate-1.jpg',k:'hifz'},
     dawra:{t:'মাওলানা (দাওরায়ে হাদিস)',s:'মুঈনুল ইসলাম, হাটহাজারী',img:'certificate-4.jpg',k:'dawra'},
@@ -1696,20 +1747,20 @@ if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(v)
   function close(){card.hidden=true;card.textContent='';if(cur){cur.classList.remove('on');cur.setAttribute('aria-expanded','false');}cur=null;}
   function build(d){
     card.textContent='';
-    var th=el('button','rc-thumb');th.type='button';
+    var th=el('button','rcd-thumb');th.type='button';
     if(d.v){
-      var im=el('img','rc-img');im.alt=d.t;im.decoding='async';im.src='https://i.ytimg.com/vi/'+d.v+'/hqdefault.jpg';th.appendChild(im);th.appendChild(el('span','rc-play','▶'));
+      var im=el('img','rcd-img');im.alt=d.t;im.decoding='async';im.src='https://i.ytimg.com/vi/'+d.v+'/hqdefault.jpg';th.appendChild(im);th.appendChild(el('span','rcd-play','▶'));
       th.setAttribute('aria-label',d.t+' — ভিডিও চালান');
       th.addEventListener('click',function(){var b=document.querySelector('.hero-roles .tr-btn[data-v="'+d.v+'"]');if(b)b.click();});
     }else{
-      var i2=el('img','rc-img');i2.alt=d.t+' — সনদ';i2.decoding='async';i2.draggable=false;
-      i2.addEventListener('error',function(){th.textContent='';th.appendChild(el('div','rc-err','ছবিটি লোড হয়নি। একটু পরে আবার চেষ্টা করুন।'));});
+      var i2=el('img','rcd-img');i2.alt=d.t+' — সনদ';i2.decoding='async';i2.draggable=false;
+      i2.addEventListener('error',function(){th.textContent='';th.appendChild(el('div','rcd-err','ছবিটি লোড হয়নি। একটু পরে আবার চেষ্টা করুন।'));});
       i2.src=d.img;th.appendChild(i2);th.setAttribute('data-k',d.k);th.setAttribute('aria-label',d.t+' — বড় করে দেখুন');
     }
-    card.appendChild(th);card.appendChild(el('p','rc-t',d.t));card.appendChild(el('p','rc-s',d.s));
-    var act=el('div','rc-act'),go=el('button','rc-go',d.v?'▶ ভিডিও দেখুন':'🔍 বড় করে দেখুন');go.type='button';
+    card.appendChild(th);card.appendChild(el('p','rcd-t',d.t));card.appendChild(el('p','rcd-s',d.s));
+    var act=el('div','rcd-act'),go=el('button','rcd-go',d.v?'▶ ভিডিও দেখুন':'🔍 বড় করে দেখুন');go.type='button';
     if(d.v)go.addEventListener('click',function(){th.click();});else go.setAttribute('data-k',d.k);
-    var x=el('button','rc-x','✕ বন্ধ');x.type='button';x.addEventListener('click',close);
+    var x=el('button','rcd-x','✕ বন্ধ');x.type='button';x.addEventListener('click',close);
     act.appendChild(go);act.appendChild(x);card.appendChild(act);
   }
   function toggle(b){
@@ -1728,28 +1779,6 @@ if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(v)
     b.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle(b);}});
     b.addEventListener('pointerdown',function(){var d=R[b.getAttribute('data-role')];if(d&&d.img){(new Image()).src=d.img;}},{passive:true});
   });
-})();
-</script>
-<script>
-(function(){
-var V={"principal": [{"s": "img/principal.jpg", "p": "50% 28%"}, {"s": "img/principal-2.jpg", "p": "50% 40%"}], "tafsir": [{"s": "img/tafsir.jpg", "p": "31% 50%"}, {"s": "img/tafsir-2.jpg", "p": "50% 78%"}], "course": [{"s": "img/course.jpg", "p": "50% 50%"}, {"s": "img/course-2.jpg", "p": "50% 40%"}, {"s": "img/course-3.jpg", "p": "50% 50%"}], "it": [{"s": "img/it.jpg", "p": "35% 55%"}, {"s": "img/it-2.jpg", "p": "40% 50%"}], "graphic": [{"s": "img/graphic-card.jpg", "p": "50% 50%"}, {"s": "img/graphic-card-2.jpg", "p": "50% 50%", "f": "contain"}], "amin": [{"s": "img/amin.jpg", "p": "50% 50%"}, {"s": "img/amin-2.jpg", "p": "50% 50%"}], "travels": [{"s": "img/travels.jpg", "p": "55% 45%"}, {"s": "img/travels-2.jpg", "p": "50% 40%"}]};
-function apply(img,v){img.style.objectPosition=v.p||'50% 50%';img.style.objectFit=v.f||'cover';}
-document.querySelectorAll('.pp-multi').forEach(function(el){
-  var views=V[el.dataset.rv];if(!views||views.length<2)return;
-  var img=el.querySelector('img'),i=0,busy=false,warmed=false;
-  function warm(){if(warmed)return;warmed=true;views.forEach(function(v,k){if(k){var im=new Image();im.src=v.s;}});}
-  function next(){
-    if(busy||!el.classList.contains('pp-multi'))return;
-    warm();busy=true;
-    var n=(i+1)%views.length,v=views[n],im=new Image();
-    im.onload=function(){el.classList.add('sw');setTimeout(function(){img.src=v.s;apply(img,v);i=n;el.classList.remove('sw');busy=false;},220);};
-    im.onerror=function(){busy=false;};
-    im.src=v.s;
-  }
-  el.addEventListener('pointerdown',warm,{passive:true});
-  el.addEventListener('click',next);
-  el.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();next();}});
-});
 })();
 </script>
 </body>
